@@ -52,7 +52,7 @@ export const news: NewsItem[] = [
 export const experiences: ExperienceItem[] = [
   {
     period: '2025 — Present',
-    role: 'Master\'s Student',
+    role: 'Master\'s Student in Computational Biology and Medical Sciences',
     organization: 'The University of Tokyo',
     description: 'Exploring the potential of sequence-to-function foundation models for ChIP-seq analysis.',
     type: 'education',
