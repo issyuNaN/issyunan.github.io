@@ -469,7 +469,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   color: var(--ink-strong);
   font-family: var(--editorial);
-  font-size: 34px;
+  font-size: clamp(22px, 2.4vw, 28px);
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1;
@@ -572,7 +572,8 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--line);
 }
 
-.publications-section .section-heading h2 { font-size: clamp(27px, 2.8vw, 34px); }
+.publications-section .section-heading h2,
+.projects-section .section-heading h2 { font-size: clamp(22px, 2.4vw, 28px); }
 
 .publications-section .work-row {
   grid-template-columns: minmax(190px, 28%) minmax(0, 1fr);
@@ -780,7 +781,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   color: var(--ink-strong);
   font-family: var(--editorial);
-  font-size: 34px;
+  font-size: clamp(22px, 2.4vw, 28px);
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1;
@@ -870,7 +871,9 @@ a { color: inherit; text-decoration: none; }
   .section-heading h2 { font-size: 29px; }
   .section-heading--compact h2 { font-size: 22px; }
   .news-section { padding-top: 35px; padding-bottom: 24px; }
-  .news-heading h2 { font-size: 30px; }
+  .news-heading h2 { font-size: 22px; }
+  .publications-section .section-heading h2,
+  .projects-section .section-heading h2 { font-size: 22px; }
   .news-item { padding-left: 22px; }
   .news-item p { font-size: 13px; }
   .experience-section .section-heading { padding-top: 22px; }
@@ -909,7 +912,7 @@ a { color: inherit; text-decoration: none; }
   .timeline-copy { grid-column: 2; }
   .timeline-marker { grid-row: 1 / span 2; }
   .offline-section { padding-top: 32px; padding-bottom: 35px; }
-  .offline-heading h2 { font-size: 29px; }
+  .offline-heading h2 { font-size: 22px; }
   .offline-heading span { font-size: 19px; }
   .offline-list { gap: 13px; margin-top: 24px; }
   .offline-item p { font-size: 13px; }
