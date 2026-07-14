@@ -5,6 +5,7 @@ import IconGlyph from './IconGlyph.vue'
 
 const photoMissing = ref(false)
 const photoUrl = `${import.meta.env.BASE_URL}${profile.photo}`
+const unitLetters = [...profile.unit]
 const inlineLinkParts = (text: string) => {
   const parts: Array<{ text: string; href?: string }> = []
   const pattern = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g
@@ -44,7 +45,14 @@ const sectionLinks = [
           <p class="hero-institution">
             <strong>{{ profile.affiliation }}</strong>
             <span class="hero-identity-separator" aria-hidden="true">·</span>
-            <span class="hero-institution-unit">{{ profile.unit }}</span>
+            <span class="hero-institution-unit" :aria-label="profile.unit">
+              <span
+                v-for="(letter, index) in unitLetters"
+                :key="`${letter}-${index}`"
+                :class="{ 'hero-institution-unit-accent': letter === 'Q' }"
+                aria-hidden="true"
+              >{{ letter }}</span>
+            </span>
           </p>
         </div>
 
