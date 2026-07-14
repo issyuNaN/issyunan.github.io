@@ -132,67 +132,75 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.15;
 }
 
-.hero-role-lines {
+.hero-identity {
   display: grid;
-  gap: 4px;
-  margin-top: 28px;
-  padding-left: 15px;
-  border-left: 2px solid var(--accent-display);
+  gap: 5px;
+  margin-top: 25px;
 }
 
-.hero-role-lines p { margin: 0; }
+.hero-identity p { margin: 0; }
 
-.hero-role-title {
-  color: var(--ink-strong);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.hero-role-focus {
-  color: var(--accent);
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.45;
-}
-
-.hero-affiliation {
+.hero-position,
+.hero-institution {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 8px;
-  padding-top: 8px;
-  line-height: 1.5;
-}
-
-.hero-affiliation-unit {
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-}
-
-.hero-affiliation-separator { color: var(--line-strong); font-size: 12px; }
-
-.hero-affiliation strong {
-  color: var(--ink-strong);
+  gap: 7px;
   font-size: 15px;
+  line-height: 1.45;
+}
+
+.hero-position { color: var(--muted); }
+
+.hero-position strong {
+  color: var(--ink-strong);
   font-weight: 600;
 }
 
-.hero-email {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin-top: 23px;
-  color: var(--accent);
-  font-size: 14px;
+.hero-institution strong {
+  color: var(--ink-strong);
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.hero-email-icon {
+.hero-institution-unit {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.hero-identity-separator {
+  color: var(--line-strong);
+  font-size: 12px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 21px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hero-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.hero-meta-item svg {
   flex: 0 0 auto;
   color: var(--muted);
+}
+
+.hero-email { color: var(--accent); }
+
+.hero-location {
+  padding-left: 11px;
+  border-left: 1px solid var(--line-strong);
 }
 
 .portrait-wrap {
@@ -316,7 +324,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
 }
 
-.hero-bio-copy .hero-phd-note {
+.hero-bio-copy .hero-note {
   margin: 17px 0 0;
   color: var(--accent-display);
   font-family: var(--hand);
@@ -333,14 +341,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   font-size: 13px;
   line-height: 1.75;
-}
-
-.hero-contact-email {
-  display: inline-block;
-  margin-left: 6px;
-  padding-bottom: 1px;
-  border-bottom: 1px solid var(--line-strong);
-  color: var(--accent);
 }
 
 .hero-links {
@@ -833,18 +833,16 @@ a { color: inherit; text-decoration: none; }
   .hero { min-height: auto; padding-top: 84px; padding-bottom: 29px; }
   .hero-intro { grid-template-columns: 1fr; gap: 54px; }
   .hero h1 { font-size: clamp(34px, 9vw, 42px); line-height: 1.2; }
-  .hero-role-lines { gap: 3px; margin-top: 21px; padding-left: 13px; }
-  .hero-role-title { font-size: 16px; }
-  .hero-role-focus { font-size: 14px; }
-  .hero-affiliation { gap: 6px; padding-top: 7px; }
-  .hero-affiliation strong { font-size: 14px; }
-  .hero-email { margin-top: 19px; font-size: 13px; }
+  .hero-identity { gap: 4px; margin-top: 21px; }
+  .hero-position, .hero-institution { gap: 6px; font-size: 14px; }
+  .hero-institution strong { font-size: 15px; }
+  .hero-meta { margin-top: 18px; }
   .portrait-wrap { width: 200px; margin-right: 4px; padding-right: 15px; justify-self: end; }
   .portrait-frame { width: 180px; }
   .portrait-note { left: 0; }
   .hero-bio { grid-template-columns: 1fr; gap: 17px; margin-top: 48px; padding-top: 26px; }
   .hero-bio-copy p { font-size: 14px; line-height: 1.85; }
-  .hero-bio-copy .hero-phd-note { font-size: 22px; line-height: 1.2; }
+  .hero-bio-copy .hero-note { font-size: 22px; line-height: 1.2; }
   .hero-bio-copy .hero-contact-note { font-size: 12px; line-height: 1.7; }
   .hero-links { align-items: flex-start; flex-direction: column; }
   .social-row { gap: 7px; }

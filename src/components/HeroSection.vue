@@ -5,9 +5,6 @@ import IconGlyph from './IconGlyph.vue'
 
 const photoMissing = ref(false)
 const photoUrl = `${import.meta.env.BASE_URL}${profile.photo}`
-const [roleTitle, roleFocus = ''] = profile.role.split('\u00b7').map((part) => part.trim())
-const [affiliationUnit, ...affiliationParts] = profile.affiliation.split(',')
-const affiliationName = affiliationParts.join(',').trim()
 const inlineLinkParts = (text: string) => {
   const parts: Array<{ text: string; href?: string }> = []
   const pattern = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g
@@ -38,20 +35,29 @@ const sectionLinks = [
       <div class="hero-copy reveal-item">
         <h1>{{ profile.name }}</h1>
 
-        <div class="hero-role-lines">
-          <p class="hero-role-title">{{ roleTitle }}</p>
-          <p v-if="roleFocus" class="hero-role-focus">{{ roleFocus }}</p>
-          <p class="hero-affiliation">
-            <span class="hero-affiliation-unit">{{ affiliationUnit.trim() }}</span>
-            <span v-if="affiliationName" class="hero-affiliation-separator" aria-hidden="true">·</span>
-            <strong v-if="affiliationName">{{ affiliationName }}</strong>
+        <div class="hero-identity">
+          <p class="hero-position">
+            <strong>{{ profile.role }}</strong>
+            <span class="hero-identity-separator" aria-hidden="true">·</span>
+            <span>{{ profile.focus }}</span>
+          </p>
+          <p class="hero-institution">
+            <strong>{{ profile.affiliation }}</strong>
+            <span class="hero-identity-separator" aria-hidden="true">·</span>
+            <span class="hero-institution-unit">{{ profile.unit }}</span>
           </p>
         </div>
 
-        <span id="email" class="hero-email">
-          <IconGlyph class="hero-email-icon" name="mail" :size="17" />
-          <span>{{ profile.email }}</span>
-        </span>
+        <div class="hero-meta">
+          <span id="email" class="hero-meta-item hero-email">
+            <IconGlyph name="mail" :size="16" />
+            <span>{{ profile.email }}</span>
+          </span>
+          <span class="hero-meta-item hero-location">
+            <IconGlyph name="location" :size="16" />
+            <span>{{ profile.location }}</span>
+          </span>
+        </div>
       </div>
 
       <div class="portrait-wrap reveal-item">
@@ -95,11 +101,8 @@ const sectionLinks = [
             <span v-else>{{ part.text }}</span>
           </template>
         </p>
-        <p class="hero-phd-note">{{ profile.phdNote }}</p>
-        <p class="hero-contact-note">
-          {{ profile.contactStatement }} {{ profile.contactInvitation }}
-          <span class="hero-contact-email">{{ profile.email }}</span>
-        </p>
+        <p class="hero-note">{{ profile.note }}</p>
+        <p class="hero-contact-note">{{ profile.contactStatement }}</p>
       </div>
     </div>
 

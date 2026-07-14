@@ -4,23 +4,24 @@ export const profile = {
   name: 'Xuewen ZHOU',
   initials: 'ZHOU',
   photo: 'images/profile.JPG',
-  role: 'Master\'s Student · AI4Health & Multimodal Intelligence',
-  affiliation: 'IQB, The University of Tokyo',
+  role: 'Master\'s Student',
+  focus: 'AI4Health & Multimodal Intelligence',
+  affiliation: 'The University of Tokyo',
+  unit: 'IQB',
   location: 'Tokyo, Japan',
   bio: [
     'I am a Master\'s student in Computational Biology and Medical Sciences at UTokyo, advised by [Prof. Ryuichiro Nakato](https://nakatolab.iqb.u-tokyo.ac.jp/members/rnakato/index-e.html). I previously earned my bachelor\'s degree in Software Engineering from Zhejiang University of Technology. There, I worked on computer networks with [Prof. Kechen Zheng](https://kechenzheng.github.io/) and data visualization with [Prof. Guodao Sun](https://homepage.zjut.edu.cn/sgd_en/).',
-    'My research aims to develop robust and interpretable AI systems that advance human health. My current work explores sequence-to-function foundation models for ChIP-seq analysis. More broadly, I am interested in AI agents for healthcare and scientific discovery.',
+    'My research aims to develop robust and interpretable AI systems that meaningfully contribute to improving human health. My current work explores sequence-to-function foundation models for ChIP-seq analysis. More broadly, I am interested in AI agents for healthcare and scientific discovery.',
   ],
-  phdNote: 'I am currently seeking PhD opportunities in these areas.',
-  contactStatement: 'I am a self-motivated researcher who enjoys tackling challenging problems.',
-  contactInvitation: 'If my interests align with your group, I would be glad to discuss potential research opportunities.',
+  note: 'If our research interests align, I would be happy to explore opportunities to collaborate.',
+  contactStatement: 'For research inquiries, please contact me directly via email.',
   interests: ['AI Agents', 'Multimodal Reasoning', 'Medical AI'],
   email: 'xwzhou.sgk [AT] gmail.com',
 }
 
 export const links: LinkItem[] = [
   { label: 'GitHub', url: 'https://github.com/issyuNaN', icon: 'github' },
-  { label: 'X', url: 'https://x.com/XuewenZHOUac', icon: 'x' },
+  { label: 'Follow', url: 'https://x.com/XuewenZHOUac', icon: 'x' },
   { label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=7dYo33EAAAAJ&hl=en', icon: 'scholar' },
 ]
 
