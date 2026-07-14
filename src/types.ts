@@ -33,7 +33,7 @@ export interface ExperienceItem {
   role: string
   organization: string
   description: string
-  type: 'education' | 'research'
+  type: 'education' | 'research' | 'internship'
 }
 
 export interface NewsItem {

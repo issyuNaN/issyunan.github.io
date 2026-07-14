@@ -64,6 +64,7 @@ export const experiences: ExperienceItem[] = [
   //   description: 'Worked on AI agents for automated method development in scRNA-seq analysis.',
   //   type: 'research',
   // },
+  
   {
     period: '2021 — 2025',
     role: 'B.Eng. in Software Engineering',
@@ -71,6 +72,14 @@ export const experiences: ExperienceItem[] = [
     description: 'Explored research topics spanning computer networks, data visualization, and multimodal learning.',
     type: 'education',
   },
+  {
+    period: 'May 2023 — Aug 2023',
+    role: 'Cybersecurity Engineer Intern',
+    organization: 'Asian Olympic Games in Hangzhou',
+    description: 'Worked on the cybersecurity team to ensure the security of network infrastructure and systems for the Asian Olympic Games.',
+    type: 'internship',
+  },
+  
 ]
 
 export const publications: Publication[] = [

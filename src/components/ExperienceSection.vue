@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { experiences } from '../data/site'
+import type { ExperienceItem } from '../types'
 import SectionHeading from './SectionHeading.vue'
+
+const experienceTypeLabels: Record<ExperienceItem['type'], string> = {
+  education: 'Education',
+  research: 'Research',
+  internship: 'Internship',
+}
 </script>
 
 <template>
@@ -13,7 +20,7 @@ import SectionHeading from './SectionHeading.vue'
           <div class="timeline-marker"><span></span></div>
           <div class="timeline-period">{{ item.period }}</div>
           <div class="timeline-copy">
-            <span class="timeline-type">{{ item.type === 'education' ? 'Education' : 'Research' }}</span>
+            <span class="timeline-type">{{ experienceTypeLabels[item.type] }}</span>
             <h3>{{ item.role }}</h3>
             <h4>{{ item.organization }}</h4>
             <p>{{ item.description }}</p>
