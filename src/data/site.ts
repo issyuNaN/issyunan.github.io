@@ -53,7 +53,7 @@ export const experiences: ExperienceItem[] = [
   {
     period: '2025 — Present',
     role: 'Master\'s Student',
-    organization: 'The University of Tokyo · IQB',
+    organization: 'The University of Tokyo',
     description: 'Exploring the potential of sequence-to-function foundation models for ChIP-seq analysis.',
     type: 'education',
   },
